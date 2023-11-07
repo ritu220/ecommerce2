@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="" href="homestyles.css" />
+    <script src="https://kit.fontawesome.com/edb330bd02.js" crossorigin="anonymous"></script>
+</head>
+  
+<style>
+
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+:root {
+--theme-bg-color: black;
+--theme-color: white;
+
+
+}
+* { 
+  margin: 0;
+  padding: 0;
+  font-family: 'Open Sans', sans-serif;
+  box-sizing: border-box;
+}
+.navbar {
+  display: flex;
+  box-shadow: 0 0 2px 0 grey;
+  align-items: center;
+  font-size: 1em;
+  
+  background-color:#3761af;
+  background-color: var(--theme-bg-color);
+  
+  color: white;
+  color: var(--theme-color);
+  
+
+}
+
+.item{
+  padding: 10px;
+  text-decoration: none;
+  color: white;
+  color: var(--theme-color);
+
+}
+
+.item.right {
+  margin: 0 0 0 auto;
+}
+
+.navbar .logo {
+  font-size: 1.2em;
+  align-items: center;
+  display: flex;
+}
+
+.logo img {
+  max-width: 40px;
+}
+.item.search {
+  transition: 0.2s linear;
+  display:flex;
+  justify-content: center;
+  flex-grow:1;
+  
+}
+.item.search .search-icon {
+  border-left: 1px solid grey;
+  margin: 2px;
+  padding-left: 10px;
+  cursor:pointer;
+  color: grey;
+}
+.item.search .search-icon:hover {
+  
+  color: black;
+}
+
+.item.search input {
+  width: 100%;
+  padding: 6px ;
+  outline: none;
+  border: 2px solid grey; 
+  max-width: 100%;
+  border: 0;
+}
+
+.item .search-group {
+  display:flex;
+  width: 100%;
+  max-width: 700px;
+  border-radius: 20px;
+  border: 2px solid grey;
+  overflow: hidden;
+  background: white;
+  
+  border-color: white;
+  color: var(--theme-color);
+
+}
+.item .search-group select{
+
+  border: 0;
+  margin: 2px;
+  border-right: 1px solid grey;
+  max-width: 5em;
+  outline: none;
+  color: grey;
+  
+}
+
+.item .group {
+  display:flex;
+  align-items: center;
+  font-size: 0.9em;
+}
+
+
+.item .group .sub{
+  font-size: 0.8em;
+
+
+}
+
+.material-icons {
+  font-size:1.8rem;
+}
+
+
+.menu-icon{
+  display:none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 700px) {
+  .item.search input {
+    display: none;
+  }
+  .menu-icon {
+    display:block;
+  }
+  .detail,.logo .text {
+    display:none;
+
+  }
+
+
+}
+
+/* Hide the dropdown content by default */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    border: 1px solid #ccc;
+    z-index: 1;
+}
+
+/* Style the dropdown name and icon */
+.dropdown {
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+}
+
+.dropdown i {
+    margin-left: 5px;
+}
+
+/* Style the dropdown menu items */
+.dropdown-content a {
+    padding: 10px;
+    text-decoration: none;
+    display: block;
+    color: black;
+}
+
+/* Style the dropdown menu items on hover */
+.dropdown-content a:hover {
+    background-color: #f2f2f2;
+}
+
+
+</style>
+
+<body>
+    <!-- <div class="Header">
+        <div class="word">
+            Ecommerce
+        </div>
+    
+        <div class="searchbox">
+            <input placeholder="type name, category name">
+        </div>
+    
+        <div class="cart">
+            <a href="login.html">
+            <button class="login">
+                login
+            </button>
+        </a>
+            <div class="icon">
+                <i class="fas fa-shopping-cart"></i> 
+            </div>
+        </div>
+    </div> -->
+
+    <nav class="navbar">
+        <i class="material-icons menu-icon">
+          menu
+        </i>
+        <div class="logo">
+          
+          <div style="color:green" class="text"> Ecommerce
+          </div>
+        </div>
+        <div class="item search right" tabindex="0">
+          <div class="search-group">
+            <select>
+              <option value="all">All</option>
+              <option value="all">Mens</option>
+              <option value="all">Womens</option>
+              <option value="all">Winter</option>
+              <option value="all">Summer</option>
+            </select>
+          <input type="text">
+          <i style="font-size: 15px;" class="material-icons search-icon">
+            search
+          </i>
+            </div>
+        </div>
+        
+        
+        <a href="" class="  item">
+      
+          <div class="group">
+           
+            <a href="login.html">
+                <button class="login">
+                    login
+                </button>
+            </a>
+          </div>
+        </a>
+      
+        <a href="" class="item">
+          <div class="group">
+              
+            <div class="icon">
+                <i class="fas fa-shopping-cart"></i> 
+            </div>
+          </div>
+        </a>
+      </nav>
+
+    <div class="subheader">
+        <div>
+            Home
+        </div>
+        <div>
+            <a style="text-decoration: none;color:black" href="products.html">Products</a>
+        </div>
+        <div class="dropdown" id="women-dropdown">
+            Women
+            
+            <div class="dropdown-content">
+                <a href="products.html">All Products</a>
+                <a href="#">Dresses</a>
+                <a href="#">Pants</a>
+                <a href="#">Skirts</a>
+            </div>
+        </div>
+        <div class="dropdown" id="men-dropdown">
+            Men
+            
+            <div class="dropdown-content">
+                <a href="products.html">All Products</a>
+                <a href="#">Shirts</a>
+                <a href="#">Pants</a>
+                <a href="#">Hoodies</a>
+            </div>
+        </div>
+        <div>
+            Kids
+        </div>
+        <a style="text-decoration: none;color:black" href="contact.html">
+        <div>
+           Contacts
+        </div>
+        </a>
+    </div>
+
+    <div class="home blur-background">
+
+     <div>
+            <h1 style="font-size:60px;color:white">
+                Ecommerce
+            </h1>
+        </div>
+       <div>
+        <h2 style="color:white">Clothes that talk on your behalf</h2>
+       </div>
+        
+    </div>
+
+    <script src="script.js">
+
+    // Get the Women and Men dropdowns
+const womenDropdown = document.getElementById("women-dropdown");
+const menDropdown = document.getElementById("men-dropdown");
+
+// Add event listeners to show/hide dropdown contents
+womenDropdown.addEventListener("click", function() {
+    const dropdownContent = womenDropdown.querySelector(".dropdown-content");
+    toggleDropdown(dropdownContent);
+});
+
+menDropdown.addEventListener("click", function() {
+    const dropdownContent = menDropdown.querySelector(".dropdown-content");
+    toggleDropdown(dropdownContent);
+});
+
+// Function to toggle the visibility of the dropdown content
+function toggleDropdown(dropdownContent) {
+    if (dropdownContent.style.display === "block") {
+        dropdownContent.style.display = "none";
+    } else {
+        dropdownContent.style.display = "block";
+    }
+}
+
+// Close the dropdowns if the user clicks outside of them
+window.addEventListener("click", function(event) {
+    if (event.target !== womenDropdown && event.target !== menDropdown) {
+        const womenDropdownContent = womenDropdown.querySelector(".dropdown-content");
+        const menDropdownContent = menDropdown.querySelector(".dropdown-content");
+        womenDropdownContent.style.display = "none";
+        menDropdownContent.style.display = "none";
+    }
+});
+
+
+    </script>
+   
+    
+   
+</body>
+</html>
